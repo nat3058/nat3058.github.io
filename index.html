@@ -403,6 +403,7 @@ body {
 </div>    
        
 <script>
+  // read more animation
   function showMore(button) {
     button.style.display = 'none';
     button.nextElementSibling.style.display = 'inline';
@@ -417,34 +418,49 @@ body {
         button.textContent = 'Read Less';
       }
     }
+
     const textElement = document.getElementById('animate-text');
-let colorIndex = 0;
-const colors = [
-{ start: '#FFD700', end: '#FFCB47' }, // Golden to Maize
-  { start: '#64C9FF', end: '#3498DB' } // Electric Blue to Deep Sky Blue
-];
+
+textElement.style.background = 'linear-gradient(to right, #FFD700 50%, #64C9FF 50%)';
+textElement.style.backgroundClip = 'text';
+textElement.style.webkitBackgroundClip = 'text';
+textElement.style.color = 'transparent';
+textElement.style.backgroundSize = '200% 100%';
 
 setInterval(() => {
-  colorIndex = (colorIndex + 1) % colors.length;
-  const startColor = colors[colorIndex].start;
-  const endColor = colors[colorIndex].end;
+  const backgroundPosition = textElement.style.backgroundPosition || '0% 0';
+  const newPosition = parseInt(backgroundPosition) + 3;
+  textElement.style.backgroundPosition = `${newPosition}% 0`;
+}, 10);
 
-  const gradient = `linear-gradient(90deg, ${startColor} 0%, ${endColor} 100%)`;
-  textElement.style.background = gradient;
-  textElement.style.backgroundClip = 'text';
-  textElement.style.webkitBackgroundClip = 'text';
-  textElement.style.color = 'transparent';
+// // GO BLUE animation [wiht ROTATE AND SCALE CAUSING WINDOW HEIGHT BUG]
+// const textElement = document.getElementById('animate-text');
+// let colorIndex = 0;
+// const colors = [
+// { start: '#FFD700', end: '#FFCB47' }, // Golden to Maize
+//   { start: '#64C9FF', end: '#3498DB' } // Electric Blue to Deep Sky Blue
+// ];
+// setInterval(() => {
+//   colorIndex = (colorIndex + 1) % colors.length;
+//   const startColor = colors[colorIndex].start;
+//   const endColor = colors[colorIndex].end;
 
-  // Add a scale animation
-  textElement.style.transform = `scale(${Math.random() * 0.5 + 1})`;
+//   const gradient = `linear-gradient(90deg, ${startColor} 0%, ${endColor} 100%)`;
+//   textElement.style.background = gradient;
+//   textElement.style.backgroundClip = 'text';
+//   textElement.style.webkitBackgroundClip = 'text';
+//   textElement.style.color = 'transparent';
 
-  // Add a rotation animation
-  textElement.style.transform += ` rotate(${Math.random() * 10 - 5}deg)`;
+//   // Add a scale animation
+//   textElement.style.transform = `scale(${Math.random() * 0.5 + 1})`;
 
-  // Add a shadow animation
-  textElement.style.textShadow = `0 0 ${Math.random() * 10}px ${startColor}`;
+//   // Add a rotation animation
+//   textElement.style.transform += ` rotate(${Math.random() * 10 - 5}deg)`;
+
+//   // Add a shadow animation
+//   textElement.style.textShadow = `0 0 ${Math.random() * 10}px ${startColor}`;
   
-}, 1000); // Decreased interval time for faster animation
+// }, 1000); // Decreased interval time for faster animation
 </script>
 </body>
 </html>
