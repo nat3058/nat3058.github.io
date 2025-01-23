@@ -53,9 +53,9 @@
         img {
             width: 100%;
             height: auto;
-            margin: 20px;
+            margin: 10px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 10px rgb(59, 170, 221);
         }
         
         .muted {
@@ -79,9 +79,17 @@
       margin-top: 0px;
     }
     .aboutme {
-  /* background-color: #FFA500; */
-  color: #FFA500; 
-}
+      /* background-color: #FFA500; */
+      color: #FFA500; 
+    }
+    .video-caption {
+      text-align: center;
+      font-style: italic;
+      font-size: 16px;
+      margin-bottom: 20px;
+      margin-top: 0px;
+    }
+
 
 
 
@@ -141,7 +149,7 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   transition: width 0.3s ease;
   z-index: 1000;
-  animation: gradient 10s ease infinite;
+  animation: gradient 5s ease infinite; /*  side bar gradient animation speed */
 }
 
 @keyframes gradient {
@@ -214,8 +222,64 @@ body {
   margin-left: 50px;
   padding: 20px;
 }
-    </style>
+
+
+
+
+.menu-bar-container {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-around;
+  padding: 5px 10px;
+}
+
+.menu-bar-button {
+  color: #337ab7;
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 16px;
+  border-bottom: 1px solid #337ab7;
+}
+
+.menu-bar-button:hover {
+  color: #23527c;
+  border-bottom: 1px solid #23527c;
+}
+</style>
 </head>
+
+
+<div class="menu-bar-container">
+  <div class="menu-bar">
+    <a href="#" class="menu-bar-button">
+      <i class="fa fa-home" aria-hidden="true"></i>
+      <span>Home</span>
+    </a>
+    <a href="mailto:nnakkapa@umich.edu" class="menu-bar-button">
+      <i class="fa fa-envelope" aria-hidden="true"></i>
+      <span>Contact</span>
+    </a>
+    <a href="NNResumeComprehensive.pdf" class="menu-bar-button">
+      <i class="fa fa-file" aria-hidden="true"></i>
+      <span>Resume</span>
+    </a>
+    <a href="Blog6_Busineses+Tech+_blog_2.0_pdf.html" class="menu-bar-button">
+      <i class="fa fa-pencil" aria-hidden="true"></i>
+      <span>Blog</span>
+    </a>
+    <a href="https://nat3058.github.io/Wearable-Real-Time-ML/" class="menu-bar-button">
+      <i class="fa fa-flask" aria-hidden="true"></i>
+      <span>Research</span>
+    </a>
+    <a href="research.pdf" class="menu-bar-button">
+      <i class="fa fa-laptop" aria-hidden="true"></i>
+      <span>High School Research</span>
+    </a>
+  </div>
+</div>
 
 
 <div class="sidebar-container">
@@ -250,11 +314,18 @@ body {
 <body>
 
     <div class="main">
-      <a href="https://youtube.com/shorts/JxRa5QyZGOg"><img src="https://markdown-videos-api.jorgenkh.no/url?url=https%3A%2F%2Fyoutube.com%2Fshorts%2FJxRa5QyZGOg%3Fsi%3DqAwqgRHCcNEbagHd" alt="AI Agent Are Game Changers"></a>
+
+      <!-- # -->
+      <a href="https://youtube.com/shorts/JxRa5QyZGOg">
+        <img src="https://markdown-videos-api.jorgenkh.no/url?url=https%3A%2F%2Fyoutube.com%2Fshorts%2FJxRa5QyZGOg%3Fsi%3DqAwqgRHCcNEbagHd" alt="AI Agent Are Game Changers">
+        <!-- <div class="video-ribbon">Demo Video</div> -->
+         <p class="video-caption" >My Ambitous AI Agent in action (1 min. demo video)</p>
+      </a>
+ 
       <h1 class="title">Nathan Nakkapalli</h1>
         <p><b>Hi, I'm Nathan!</b> I recently graduated from <a href="https://www.umich.edu"> The University of Michigan</a> 
           (Computer Engineering BSE, Physics Minor) and I'm currently building out original, creative projects
-           utilizing Artificial Intelligence in an startup-like capacity.
+           utilizing Artificial Intelligence in a startup-like capacity.
             <span class="muted">(If you want to get in touch with 
               me, my email address is nnakkapa at umich.edu)</span></p>
 
@@ -263,9 +334,9 @@ body {
 <p><b>I'm excited about the creative freedom and high impact of AI-driven software.</b> 
 <ul>
   <!-- BULLET -->
-  1.) In the past few months, I architected and
+  1.) In the past few months, I have architected and
   built a <a href="https://github.com/nat3058/Automator_LLMs"> novel vision-based AI Agent and Framework using multimodal LLMs </a> to 
-    autonomously interact (scroll/click) on websites and complete nontrivial tasks (an quick 1 min demo video is shown at the top of the page). 
+    autonomously interact (scroll/click) on websites and complete nontrivial tasks (a quick 1 min demo video is shown at the top of the page). 
      <!-- READ MORE -->
     <button class="read-more-button" onclick="showMore(this)">[Read More]</button>
     <div class="read-more-content">
@@ -273,11 +344,13 @@ body {
       The Framework portion consists of high-level operations (read, type, click_button, scroll, extract_info, etc.) that allows the AI to 
     execute those actions and control the computer. The Framework uses 
     <a href="https://arxiv.org/abs/2310.11441">Set-of-Marks Prompting,</a> removing the need to use the mouse at all since 
-    all GUI interactions (including clicking buttons and scrolling) can be virtaully driven by the keyboard.    
-    The AI Agent portion automates dynamic tasks where the input can vary (unlike in traditional automation where actions are hard-coded) 
-    This capability is thanks to the vision-mechanism of the AI Agent and allows for "more human-like automation" since the Agent 
-    interprets and interacts with website GUIs just like humans.
-    Beyond the proof-of-concept demo, there is a lot more engineering work (experiments, usecases, code development, etc.) and creative work (unqiue content creation & video demos, collaborations, community feedback, etc.) 
+    all GUI interactions (including clicking buttons and scrolling) can be driven by the keyboard.    
+    The AI Agent portion automates dynamic tasks where the input can vary 
+    (unlike in traditional automation where actions are hard-coded). 
+    This capability is thanks to the vision-mechanism of the AI Agent and allows for "more human-like automation" 
+    since the Agent can see, interpret, and interact with website GUIs (just like humans).
+    Beyond the proof-of-concept demo, there is a lot more engineering work (experiments, usecases, code development, etc.) 
+    and creative work (unqiue content creation & video demos, collaborations, community feedback, etc.) 
     that can be done to take this project to the next level.
     Note, this project is very similar to <a href="https://docs.anthropic.com/en/docs/build-with-claude/computer-use"> 
         Claude's Computer Use</a>. However, some of the engineering design and implementation choices differ.
@@ -291,9 +364,12 @@ body {
     <button class="read-more-button" onclick="showMore(this)">[Read More]</button>
     <div class="read-more-content">
     AFAIK, no other open source Youtube Scraper
-    scrapes and labels comments in a Youtube video as an top-level comment (the first comment in a comment thread) or as a subreply (all other comments within an comment thread).
-    The original inspiration for this project was to identify/report sophisticated yet subtle scam comment threads in Youtube videos. 
-    The future work consists of training an ML model to identify those scam comment threads with high accuracy and then automate the reporting of those scams.
+    scrapes and groups/labels Comments with their associated Subreplies 
+    for any Youtube video.
+    The original inspiration for this project was to identify/report sophisticated yet 
+    subtle scam comment threads in Youtube videos. 
+    The future work consists of finetuning a ML model to 
+    identify those scam comment threads with high accuracy and then automate the reporting of those scams.
   </div>
     <br><br>
 <!-- BULLET -->
@@ -301,21 +377,21 @@ body {
 <button class="read-more-button" onclick="showMore(this)">[Read More]</button>
 <div class="read-more-content">
   <!-- details -->
-  <a href="https://nat3058.github.io/MadMoneySummaries/"> Mad Money Summaries </a> (currently unmaintained, looking for an dev/maintainer), Cracked Chess (chess but rules change dynamically, forcing players to make moves based on partial info), 
-        an better application of an well-known HCI device on laptops, and an better alternative to the social media app BeReal. 
+  <a href="https://nat3058.github.io/MadMoneySummaries/"> Mad Money Summaries </a> (currently unmaintained, looking for a dev/maintainer), Cracked Chess (chess but rules change dynamically, forcing players to make moves based on partial info), 
+        a better application of a well-known HCI device on laptops, and a better alternative to the social media app BeReal. 
 </div>
 </ul>
 <p>
 <b>I'm also interested in working with teams to build<a href="https://www.nvidia.com/en-us/glossary/generative-physical-ai/"> Physical AI. </a> </b>
-      With a small team, I worked on an <a href="https://nat3058.github.io/Wearable-Real-Time-ML/"> 
+      With a small team, I worked on a <a href="https://nat3058.github.io/Wearable-Real-Time-ML/"> 
       Wrist Wearable for Hand Gesture Recognition</a>
       using real time Machine Learning.
-      In an embedded systems team project, we built an <a href="https://www.youtube.com/watch?v=0vpv7WT4TPM"> AI-powered Tic-Tac-Toe Robot </a> that physically plays tic-tac-toe against a human at various
-      difficulty modes using the Minimax algorithm.
+      In an embedded systems team project, we built an <a href="https://nat3058.github.io/TicTacToeRobot/"> AI-powered Tic-Tac-Toe Robot </a> that physically plays tic-tac-toe against a human at various
+      difficulty modes using the <a href="https://www.javatpoint.com/mini-max-algorithm-in-ai"> Minimax algorithm. </a>
 </p>
 
     <p><b>In the past</b>, I spent a summer as an Embedded Systems Intern
-      at <a href="https://intrepidcs.com"> Intrepid Control Systems </a> (an company making hardware & 
+      at <a href="https://intrepidcs.com"> Intrepid Control Systems </a> (a company making hardware & 
       software for analyzing/testing onboard computer networks in vehicles).
       I supported firmware validation efforts by creating an
       ultrafast C++ GUI application for Ethernet Data Analysis and engineered 12 custom-made cables for internal testing purposes.
@@ -324,7 +400,9 @@ body {
       to 40 first-year students. For my final semester at Michigan, I was honored to be apart of
       <a href="https://cfe.umich.edu/launch/perot-jain-techlab-series/pjtl-at-mcity/">
       TechLab at MCity</a>, where I worked with a team to produce
-      accurate 3D scenes from a set of 2D images uisng Gaussian Splatting 
+      accurate 3D scenes from a set of 2D images using <a href="https://huggingface.co/blog/gaussian-splatting">
+        Gaussian Splatting 
+      </a>
       in partnership with <a href="https://www.capoom.com">
       Capoom.</a>
       </p>
@@ -344,7 +422,7 @@ body {
       </p>
       <p>
       <b>Growing up</b>, my two favorite sports were basketball and football. 
-      I hope to inspire and help younger generations experience the blessing of sports. 
+      Looking forward, I hope to inspire and help younger generations experience the blessing of sports. 
       </p>  
     </div>
     <!-- 
@@ -462,5 +540,19 @@ setInterval(() => {
   
 // }, 1000); // Decreased interval time for faster animation
 </script>
+
+
+
+
+
+<!-- Google tag (gtag.js) -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-7JB3EMBZGV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7JB3EMBZGV');
+</script> -->
 </body>
 </html>
