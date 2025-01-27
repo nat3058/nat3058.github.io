@@ -149,7 +149,7 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   transition: width 0.3s ease;
   z-index: 1000;
-  animation: gradient 5s ease infinite; /*  side bar gradient animation speed */
+  animation: gradient 10s ease infinite; /*  side bar gradient animation speed */
 }
 
 @keyframes gradient {
@@ -226,28 +226,72 @@ body {
 
 
 
+
+
+
+/* Mobile-friendly layout */
 .menu-bar-container {
-  position: absolute;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
-  justify-content: space-around;
-  padding: 5px 10px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Increased gap */
+  margin-bottom: -50px; /* Adjust this value to your liking */
+  overflow-x: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  white-space: nowrap;
 }
 
+
+@keyframes fade-away {
+  0% {
+    opacity: 1; /* Start with full opacity */
+  }
+  100% {
+    opacity: 0; /* Fade away to zero opacity */
+  }
+}
+/* .menu-bar-container::-webkit-scrollbar {
+  display: block;
+  animation: hide-scrollbar 2s forwards;
+}
+
+@keyframes hide-scrollbar {
+  0% {
+    display: block;
+  }
+  100% {
+    display: none;
+  }
+} */
 .menu-bar-button {
   color: #337ab7;
   text-decoration: none;
-  margin-right: 20px;
-  font-size: 16px;
+  margin-bottom: 15px; /* Increased margin */
+  font-size: 14px;
   border-bottom: 1px solid #337ab7;
+  padding: 10px; /* Added padding */
 }
 
 .menu-bar-button:hover {
   color: #23527c;
   border-bottom: 1px solid #23527c;
 }
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  .menu-bar-container {
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 20px; /* Reset gap for larger screens */
+  }
+  .menu-bar-button {
+    margin-right: 20px;
+    font-size: 16px;
+    padding: 10px; /* Reset padding for larger screens */
+  }
+}
+
 </style>
 </head>
 
@@ -278,6 +322,7 @@ body {
       <i class="fa fa-laptop" aria-hidden="true"></i>
       <span>High School Research</span>
     </a>
+
   </div>
 </div>
 
