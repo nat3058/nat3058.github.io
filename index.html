@@ -553,18 +553,29 @@ body {
     <div class="space-y-2">
       
       <!-- Section 1 -->
-      <div class="relative grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 p-4 md:p-0">
+       <div class="relative grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 p-4 md:p-0">
         <!-- Timeline dot with hover effect -->
-        <!-- <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-orange-500 rounded-full z-10 shadow-lg hover:shadow-xl transition-all duration-300"> -->
         <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-green-500 rounded-full z-10 shadow-lg hover:shadow-xl transition-all duration-300">
           <div class="absolute inset-0 bg-green-600 rounded-full opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
         </div>
-        
+      
         <!-- Left content -->
+        <div class="md:text-right md:pr-12 relative">
+          <h2 class="text-3xl font-bold mb-4 text-green-400">
+            Youtube Scam<br>
+            Comment Thread<br>
+            Detection
+          </h2>
+          <p class="text-gray-400 max-w-md ml-auto leading-relaxed">
+            Real-time machine learning pipeline to stop subtle yet sophisticated scam campaigns
+          </p>
+        </div>
+      
+        <!-- Right content -->
         <div class="container mx-auto px-4 py-8 max-w-7xl">
           <div class="content-container space-y-6">
-              <!-- Thumbnail Container --> 
-              <div class="thumbnail-container group relative w-full md:w-4/5 mx-auto rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 hover:-translate-y-1 cursor-pointer bg-black/80 mt-0">
+            <!-- Thumbnail Container -->
+              <div class="thumbnail-container group relative w-full md:w-4/5 mx-auto rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 hover:-translate-y-1 cursor-pointer bg-black/80">
                 <div class="loading-spinner absolute top-1/2 left-1/2 w-12 h-12 rounded-full z-10"></div>
                 
                 <iframe 
@@ -573,99 +584,86 @@ body {
                     loading="eager"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen
-            
+                    onload="this.previousElementSibling.style.display = 'none'"
                 ></iframe>
                 
                 <div class="caption w-full p-4 bg-black/85 text-white transition-all duration-300 rounded-b-2xl"> <!-- Modified -->
                     <a href="https://nat3058.github.io/ComingSoonPage-dark_theme/" 
-                       target="_blank" 
-                       class="text-green-400 hover:text-green-300 font-bold transition-colors flex items-center">
-                        See it in action!
+                      target="_blank" 
+                      class="text-green-400 hover:text-green-300 font-bold transition-colors flex items-center">
+                      See it in action!
+                        <i class="fa-solid fa-up-right-from-square ml-2 text-sm opacity-80 hover:opacity-100 transition-opacity"></i>
+                    </a>
+                </div>
+            
+              </div>
+          </div>
+        </div>
+        
+    </div>
+
+        <!-- Section 1.5: Treetcode -->
+        <div class="relative grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 p-4 md:p-0">
+    
+          <!-- Timeline dot with Treetcode green theme -->
+          <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-green-500 rounded-full z-10 shadow-lg hover:shadow-xl transition-all duration-300">
+            <div class="absolute inset-0 bg-green-600 rounded-full opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+          </div>
+          
+          <!-- Left content: Interactive Preview -->
+          <div class="container mx-auto px-4 py-8 max-w-7xl">
+            <div class="content-container space-y-6">
+              <!-- Thumbnail Container --> 
+              <div class="thumbnail-container group relative w-full md:w-4/5 mx-auto rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 hover:-translate-y-1 cursor-pointer bg-black/80 mt-0">
+                <div class="loading-spinner absolute top-1/2 left-1/2 w-12 h-12 rounded-full z-10"></div>
+
+                <!-- Live Iframe Preview of Treetcode -->
+                <iframe 
+                    class="w-full h-64 [pointer-events:none]"
+                    src="https://treetcode.netlify.app/"
+                    loading="eager"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                ></iframe>
+                
+                <div class="caption w-full p-4 bg-black/85 text-white transition-all duration-300 rounded-b-2xl">
+                    <a href="https://treetcode.netlify.app/" 
+                      target="_blank" 
+                      class="text-green-400 hover:text-green-300 font-bold transition-colors flex items-center">
+                        Treetcode website
                         <i class="fa-solid fa-up-right-from-square ml-2 text-sm opacity-80 hover:opacity-100 transition-opacity"></i>
                     </a>
                 </div>
               </div>
-          </div>
-        </div>
-        <!-- end Left content -->
-      
-        
-        <!-- Right content -->
-        <div class="md:pl-12 relative ">
-          <h2 class="text-3xl font-bold mb-4 text-green-400">
-            Youtube Scam<br>
-            Comment Thread<br>
-            Detection
-          </h2>
-          <p class="text-gray-400 max-w-md leading-relaxed">
-            Real-time machine learning pipeline to stop subtle yet sophisticated scam campaigns
-          </p>
-        </div>
-      
-      </div>
-
-            <!-- Section 1.5: Treetcode -->
-            <div class="relative grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 p-4 md:p-0">
-        
-              <!-- Timeline dot with Treetcode green theme -->
-              <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-green-500 rounded-full z-10 shadow-lg hover:shadow-xl transition-all duration-300">
-                <div class="absolute inset-0 bg-green-600 rounded-full opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
-              </div>
-              
-              <!-- Left content: Interactive Preview -->
-              <div class="container mx-auto px-4 py-8 max-w-7xl">
-                <div class="content-container space-y-6">
-                  <!-- Thumbnail Container --> 
-                  <div class="thumbnail-container group relative w-full md:w-4/5 mx-auto rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 hover:-translate-y-1 cursor-pointer bg-black/80 mt-0">
-                    <div class="loading-spinner absolute top-1/2 left-1/2 w-12 h-12 rounded-full z-10"></div>
-
-                    <!-- Live Iframe Preview of Treetcode -->
-                    <iframe 
-                        class="w-full h-64 [pointer-events:none]"
-                        src="https://treetcode.netlify.app/"
-                        loading="eager"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen
-                    ></iframe>
-                    
-                    <div class="caption w-full p-4 bg-black/85 text-white transition-all duration-300 rounded-b-2xl">
-                        <a href="https://treetcode.netlify.app/" 
-                          target="_blank" 
-                          class="text-green-400 hover:text-green-300 font-bold transition-colors flex items-center">
-                            Treetcode website
-                            <i class="fa-solid fa-up-right-from-square ml-2 text-sm opacity-80 hover:opacity-100 transition-opacity"></i>
-                        </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- end Left content -->
-      
-              
-              <!-- Right content: Project Details -->
-              <div class="md:pl-12 relative">
-                <h2 class="text-3xl font-bold mb-4 text-green-400">
-                  Treetcode
-                </h2>
-                <p class="text-gray-400 max-w-md leading-relaxed">
-                  Leetcode-style coding problems but with true real life data. Scalably built with React and Tailwind CSS.
-                </p>
-              </div>
-              <!-- end Right content -->
-      
             </div>
+          </div>
+          <!-- end Left content -->
+  
+          
+          <!-- Right content: Project Details -->
+          <div class="md:pl-12 relative">
+            <h2 class="text-3xl font-bold mb-4 text-green-400">
+              Treetcode
+            </h2>
+            <p class="text-gray-400 max-w-md leading-relaxed">
+              Leetcode-style coding problems but with true real life data. Scalably built with React and Tailwind CSS.
+            </p>
+          </div>
+          <!-- end Right content -->
+  
+        </div>
       
       
        <!-- Section 2 -->
        <div class="relative grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 p-4 md:p-0">
         <!-- Timeline dot with hover effect -->
-        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-orange-500 rounded-full z-10 shadow-lg hover:shadow-xl transition-all duration-300">
-          <div class="absolute inset-0 bg-orange-600 rounded-full opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-green-500 rounded-full z-10 shadow-lg hover:shadow-xl transition-all duration-300">
+          <div class="absolute inset-0 bg-green-600 rounded-full opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
         </div>
       
         <!-- Left content -->
         <div class="md:text-right md:pr-12 relative">
-          <h2 class="text-3xl font-bold mb-4 orange-text">
+          <h2 class="text-3xl font-bold mb-4 text-green-400">
             Computer-Using AI Agent
           </h2>
           <p class="text-gray-400 max-w-md ml-auto leading-relaxed">
@@ -707,8 +705,8 @@ body {
       <!-- Section 3 -->
       <div class="relative grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 p-4 md:p-0">
         <!-- Timeline dot with hover effect -->
-        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-orange-500 rounded-full z-10 shadow-lg hover:shadow-xl transition-all duration-300">
-          <div class="absolute inset-0 bg-orange-600 rounded-full opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-green-500 rounded-full z-10 shadow-lg hover:shadow-xl transition-all duration-300">
+          <div class="absolute inset-0 bg-green-600 rounded-full opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
         </div>
         
         <!-- Left content -->
@@ -742,7 +740,7 @@ body {
         
         <!-- Right content -->
         <div class="md:pl-12 relative">
-          <h2 class="text-3xl font-bold mb-4 orange-text">
+          <h2 class="text-3xl font-bold mb-4 text-green-400">
             Mad Money Summaries
           </h2>
           <p class="text-gray-400 max-w-md leading-relaxed">
@@ -763,7 +761,7 @@ body {
       
         <!-- Left content -->
         <div class="md:text-right md:pr-12 relative">
-          <h2 class="text-3xl font-bold mb-4 orange-text">
+          <h2 class="text-3xl font-bold mb-4 text-green-400">
             Unique Wrist Wearable 
           </h2>
           <p class="text-gray-400 max-w-md ml-auto leading-relaxed">
@@ -841,7 +839,7 @@ body {
         
         <!-- Right content -->
         <div class="md:pl-12 relative">
-          <h2 class="text-3xl font-bold mb-4 orange-text">
+          <h2 class="text-3xl font-bold mb-4 text-green-400">
             AI-powered <br>
             Tic-Tac-Toe Robot
           </h2>
